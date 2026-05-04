@@ -7,10 +7,12 @@ const App = () => {
   const [selectedOption, setSelectedOption] = useState('Home');
 
   return (
-    <div>
-      <Header setSelectedOption={setSelectedOption} />
-      <Main selectedOption={selectedOption} setSelectedOption={setSelectedOption} />
-      <Footer />
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 py-6">
+      <div className="w-full max-w-4xl">
+        <Header/>
+        <Main/>
+        <Footer />
+      </div>
     </div>
   );
 };
