@@ -4,7 +4,6 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 
 const App = () => {
-  const [selectedOption, setSelectedOption] = useState('Home');
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4 py-6">

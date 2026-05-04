@@ -5,8 +5,9 @@ import { useState, useEffect } from 'react';
 const Header = () => {
 
   return (
-    <header>   
-        <h1>Main</h1>
+    <header className="flex flex-col items-center justify-center py-12">   
+        <h1 className="text-4xl font-bold mb-6">The Engineering Manager's Diary</h1>
+        <button className="px-6 py-3 bg-red-600 text-white rounded border border-red-600 hover:bg-red-700">Log in</button>
     </header>
   );
 };
