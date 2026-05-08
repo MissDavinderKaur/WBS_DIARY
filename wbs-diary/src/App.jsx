@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import Login from './components/Login';
+import Notebook from './components/Notebook';
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
           </div>
         } />
         <Route path="/login" element={<Login />} />
+        <Route path="/notebook" element={<Notebook />} />
       </Routes>
     </BrowserRouter>
   );
