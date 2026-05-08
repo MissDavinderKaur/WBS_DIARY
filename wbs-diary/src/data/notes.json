@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "title": "Weekly Check-in",
+    "detail": "Good energy this week — current sprint work is on track and no blockers reported. Mentioned wanting more ownership over the upcoming API redesign.",
+    "rating": "Green"
+  },
+  {
+    "id": 2,
+    "title": "Performance Review",
+    "detail": "Consistently delivering quality work and receiving strong peer feedback. Promotion to Senior is a realistic target for end of year if current trajectory continues.",
+    "rating": "Green"
+  },
+  {
+    "id": 3,
+    "title": "Issue Escalation",
+    "detail": "Raised a concern about repeated context-switching due to being pulled into another team's incidents. Agreed to flag this to the engineering manager and set clearer boundaries.",
+    "rating": "Red"
+  },
+  {
+    "id": 4,
+    "title": "Feature Discussion",
+    "detail": "Talked through the proposed approach for the notification preferences UI — they have a solid plan and flagged a potential conflict with the existing settings schema. Will pair with back end to resolve.",
+    "rating": "Green"
+  },
+  {
+    "id": 5,
+    "title": "Career Development",
+    "detail": "Expressed interest in moving toward a tech lead role and wants to take on more cross-team coordination. Agreed to involve them in the next architecture review as a starting point.",
+    "rating": "Green"
+  },
+  {
+    "id": 6,
+    "title": "Feedback Session",
+    "detail": "Shared feedback from two peers noting that PR descriptions could be more thorough to help reviewers. They took it well and committed to using the new PR template consistently.",
+    "rating": "Amber"
+  },
+  {
+    "id": 7,
+    "title": "Blockers Review",
+    "detail": "Progress on the search refactor has stalled waiting on a design decision that has been pending for two weeks. Escalated to product to get a resolution by end of week.",
+    "rating": "Red"
+  },
+  {
+    "id": 8,
+    "title": "Goal Setting",
+    "detail": "Set three goals for Q3: complete the accessibility spike, lead one cross-team initiative, and complete an external course on system design. Check-in scheduled at mid-quarter.",
+    "rating": "Green"
+  },
+  {
+    "id": 9,
+    "title": "Workload Review",
+    "detail": "Currently carrying 14 story points alongside two support rotations, which feels unsustainable. Agreed to reduce on-call frequency to once every four weeks and defer one non-urgent ticket.",
+    "rating": "Amber"
+  },
+  {
+    "id": 10,
+    "title": "Onboarding Follow-up",
+    "detail": "Three weeks in and settling in well — codebase is becoming familiar and they have shipped two small features already. Main ask was for more context on the deployment process.",
+    "rating": "Green"
+  },
+  {
+    "id": 11,
+    "title": "Technical Deep-dive",
+    "detail": "Walked through the caching strategy they are proposing for the product listing page — the approach is sound and should reduce database load by roughly 40%. Ready to move to implementation.",
+    "rating": "Green"
+  },
+  {
+    "id": 12,
+    "title": "Team Dynamics Discussion",
+    "detail": "Raised discomfort around communication style from a senior peer during code reviews, describing some comments as dismissive. Agreed to have a broader team conversation about review etiquette.",
+    "rating": "Red"
+  },
+  {
+    "id": 13,
+    "title": "Quarterly Review",
+    "detail": "Delivered all committed goals and received excellent feedback from stakeholders on the billing portal project. Stretch goal around test coverage was partially met at 72% against a target of 80%.",
+    "rating": "Green"
+  },
+  {
+    "id": 14,
+    "title": "Learning & Development",
+    "detail": "Completed the AWS Solutions Architect course and is keen to apply learnings to the upcoming infrastructure work. Approved budget for a conference ticket to QCon in the autumn.",
+    "rating": "Green"
+  },
+  {
+    "id": 15,
+    "title": "Process Improvement",
+    "detail": "Suggested moving daily standups to async updates via Slack to reclaim focus time in the mornings. Agreed to trial it for two weeks and review the impact on team coordination.",
+    "rating": "Amber"
+  },
+  {
+    "id": 16,
+    "title": "Issue Escalation",
+    "detail": "Flagged that requirements for the reporting feature keep changing mid-sprint, making estimation unreliable. Will raise with the product owner to agree a change-freeze window closer to release.",
+    "rating": "Red"
+  },
+  {
+    "id": 17,
+    "title": "Personal Development Plan",
+    "detail": "Updated the PDP to include a goal around public speaking — they want to present at an internal tech talk by year end. Identified a low-stakes team session next month as a first step.",
+    "rating": "Green"
+  },
+  {
+    "id": 18,
+    "title": "Feedback Session",
+    "detail": "Positive feedback from the team lead on how well they handled the production incident last week, particularly around clear communication under pressure. Encouraged to document the experience for the post-mortem.",
+    "rating": "Green"
+  },
+  {
+    "id": 19,
+    "title": "Feature Discussion",
+    "detail": "Discussed the dark mode implementation plan — they are confident on the CSS variable approach but flagged uncertainty about theming third-party components. Will spike on this before committing to an estimate.",
+    "rating": "Amber"
+  },
+  {
+    "id": 20,
+    "title": "Performance Review",
+    "detail": "Delivery has slipped over the last two sprints with several tickets carrying over repeatedly. A conversation about focus and task management strategies was had and a follow-up is set for four weeks time.",
+    "rating": "Red"
+  },
+  {
+    "id": 21,
+    "title": "Weekly Check-in",
+    "detail": "Flagged feeling fatigued after a busy sprint and asked for a lighter load next cycle. No blockers on current work but morale is lower than usual — worth monitoring.",
+    "rating": "Amber"
+  },
+  {
+    "id": 22,
+    "title": "Project Handover",
+    "detail": "Handed over ownership of the legacy import service — documentation is thorough and the new owner has been shadowing for a week. A 30-day support window has been agreed for any questions.",
+    "rating": "Green"
+  },
+  {
+    "id": 23,
+    "title": "Career Development",
+    "detail": "Feeling uncertain about their career path and whether engineering management is right for them. Agreed to arrange a coffee chat with two existing engineering managers to get a realistic view before deciding.",
+    "rating": "Amber"
+  },
+  {
+    "id": 24,
+    "title": "Knowledge Sharing",
+    "detail": "Shared a runbook they created for the payment retry logic, which will be added to the team wiki. Encouraged to run a short knowledge-share session with the wider team next sprint.",
+    "rating": "Green"
+  },
+  {
+    "id": 25,
+    "title": "Workload Review",
+    "detail": "Work is well-balanced and they feel they have headroom to take on the accessibility audit work. Capacity will need revisiting once the new project kicks off in six weeks.",
+    "rating": "Green"
+  },
+  {
+    "id": 26,
+    "title": "Blockers Review",
+    "detail": "Dependent on a third-party API that has been undocumented and unresponsive for ten days, causing the integration work to stall. Escalated to the vendor account manager for resolution.",
+    "rating": "Red"
+  },
+  {
+    "id": 27,
+    "title": "Goal Setting",
+    "detail": "Revisited mid-year goals — two of three are on track but the mentoring goal has not had enough time allocated to it. Blocked out two hours per week in the calendar to address this.",
+    "rating": "Amber"
+  },
+  {
+    "id": 28,
+    "title": "Technical Deep-dive",
+    "detail": "Reviewed the proposed event-driven refactor for the order pipeline — there are risks around message ordering that need further design work before development begins. Scheduled a follow-up with the platform team.",
+    "rating": "Amber"
+  },
+  {
+    "id": 29,
+    "title": "Onboarding Follow-up",
+    "detail": "Six weeks in and fully productive — taking on tickets independently and proactively asking good questions in code review. Ready to be removed from the formal buddy programme.",
+    "rating": "Green"
+  },
+  {
+    "id": 30,
+    "title": "Issue Escalation",
+    "detail": "Raised a concern that a key architectural decision was made without input from the team, leading to frustration and rework. Agreed to revisit the decision-making process and ensure engineers are consulted earlier.",
+    "rating": "Amber"
+  }
+]
