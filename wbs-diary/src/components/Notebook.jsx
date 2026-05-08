@@ -1,10 +1,9 @@
 import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Notebook = () => {
-  const { state } = useLocation();
-  const { username } = state || { username: ''};
   const navigate = useNavigate();
+  const username = localStorage.getItem('currentUser') || '';
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen gap-4 pt-20">
