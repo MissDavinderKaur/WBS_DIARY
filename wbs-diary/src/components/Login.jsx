@@ -15,13 +15,14 @@ const Login = () => {
     setErrors(newErrors);
     if (Object.keys(newErrors).length > 0) return;
 
-    if (!localStorage.getItem('username')) {
-      localStorage.setItem('username', username.trim());
-      localStorage.setItem('isLoggedIn', 'true');
-    }
+    const key = username.trim();
+    const existing = JSON.parse(localStorage.getItem(key) || '{}');
+    const updated = { ...existing, isLoggedIn: true };
+    localStorage.setItem(key, JSON.stringify(updated));
+    localStorage.setItem('currentUser', key);
 
-    const notes = JSON.parse(localStorage.getItem(`notes_${username.trim()}`) || '[]');
-    navigate('/notebook', { state: { username: username.trim(), notes } });
+    const notes = updated.notes || [];
+    navigate('/notebook', { state: { username: key, notes } });
   };
 
   return (

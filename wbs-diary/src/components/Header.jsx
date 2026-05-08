@@ -1,18 +1,35 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const navigate = useNavigate();
-  const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') === 'true');
+  const location = useLocation();
+  const getIsLoggedIn = () => {
+    const currentUser = localStorage.getItem('currentUser');
+    if (!currentUser) return false;
+    const userData = JSON.parse(localStorage.getItem(currentUser) || '{}');
+    return userData.isLoggedIn === true;
+  };
+
+  const [isLoggedIn, setIsLoggedIn] = useState(getIsLoggedIn);
 
   useEffect(() => {
-    const handleStorage = () => setIsLoggedIn(localStorage.getItem('isLoggedIn') === 'true');
-    window.addEventListener('storage', handleStorage);
-    return () => window.removeEventListener('storage', handleStorage);
-  });
+    setIsLoggedIn(getIsLoggedIn());
+  }, [location]);
+
+  // useEffect(() => {
+  //   const handleStorage = () => setIsLoggedIn(getIsLoggedIn());
+  //   window.addEventListener('storage', handleStorage);
+  //   return () => window.removeEventListener('storage', handleStorage);
+  // }, []);
 
   const handleLogOut = () => {
-    localStorage.setItem('isLoggedIn', 'false');
+    const currentUser = localStorage.getItem('currentUser');
+    if (currentUser) {
+      const userData = JSON.parse(localStorage.getItem(currentUser) || '{}');
+      localStorage.setItem(currentUser, JSON.stringify({ ...userData, isLoggedIn: false }));
+    }
+    localStorage.removeItem('currentUser');
     setIsLoggedIn(false);
     navigate('/');
   };
