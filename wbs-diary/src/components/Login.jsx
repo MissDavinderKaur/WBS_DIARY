@@ -17,6 +17,7 @@ const Login = () => {
 
     if (!localStorage.getItem('username')) {
       localStorage.setItem('username', username.trim());
+      localStorage.setItem('isLoggedIn', 'true');
     }
 
     const notes = JSON.parse(localStorage.getItem(`notes_${username.trim()}`) || '[]');
