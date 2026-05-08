@@ -19,17 +19,28 @@ const pickRandomNotes = () => {
 const Team = ({ team }) => {
   const navigate = useNavigate();
 
-  const memberNotes = useMemo(() =>
-    MEMBERS.reduce((acc, member) => {
-      acc[member] = pickRandomNotes();
+  const memberNotes = useMemo(() => {
+    const username = localStorage.getItem('currentUser');
+    const userData = username ? JSON.parse(localStorage.getItem(username) || '{}') : {};
+    const storedTeam = userData[team.toLowerCase()] || {};
+
+    return MEMBERS.reduce((acc, member) => {
+      const seed = pickRandomNotes();
+      const stored = (storedTeam[member] || []).map((n, i) => ({
+        id: `stored-${member}-${i}`,
+        title: n.Title,
+        detail: n.Detail,
+        rating: n.Rating,
+      }));
+      acc[member] = [...seed, ...stored];
       return acc;
-    }, {}),
-  []);
+    }, {});
+  }, [team]);
 
   return (
     <div className="flex flex-col min-h-screen pt-20 px-8 max-w-3xl mx-auto w-full">
       <button
-        className="fixed top-20 left-4 px-4 py-2 bg-red-600 text-white rounded border border-red-600 hover:bg-red-700"
+        className="self-start px-4 py-2 bg-red-600 text-white rounded border border-red-600 hover:bg-red-700 mb-6"
         onClick={() => navigate(-1)}
       >
         Back

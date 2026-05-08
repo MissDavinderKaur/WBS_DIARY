@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Login from './components/Login';
 import Notebook from './components/Notebook';
 import Team from './components/Team';
+import NoteForm from './components/NoteForm';
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="/notebook/frontend" element={<Team team="frontend" />} />
         <Route path="/notebook/backend" element={<Team team="backend" />} />
         <Route path="/notebook/platforms" element={<Team team="platforms" />} />
+        <Route path="/notebook/new" element={<NoteForm />} />
       </Routes>
     </BrowserRouter>
   );
