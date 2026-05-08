@@ -21,8 +21,7 @@ const Login = () => {
     localStorage.setItem(key, JSON.stringify(updated));
     localStorage.setItem('currentUser', key);
 
-    const notes = updated.notes || [];
-    navigate('/notebook', { state: { username: key, notes } });
+    navigate('/notebook');
   };
 
   return (

@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Main from './components/Main';
@@ -22,6 +21,9 @@ const App = () => {
         } />
         <Route path="/login" element={<Login />} />
         <Route path="/notebook" element={<Notebook />} />
+        <Route path="/notebook/frontend" element={<div>Front End</div>} />
+        <Route path="/notebook/backend" element={<div>Back End</div>} />
+        <Route path="/notebook/platforms" element={<div>Platforms</div>} />
       </Routes>
     </BrowserRouter>
   );
