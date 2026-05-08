@@ -9,7 +9,7 @@ const Notebook = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen gap-4 pt-20">
       <button
-        className="fixed top-16 left-4 px-4 py-2 bg-red-600 text-white rounded border border-red-600 hover:bg-red-700"
+        className="fixed top-20 left-4 px-4 py-2 bg-red-600 text-white rounded border border-red-600 hover:bg-red-700"
         onClick={() => navigate(-1)}
       >
         Back

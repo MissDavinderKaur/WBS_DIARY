@@ -4,6 +4,7 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import Notebook from './components/Notebook';
+import Team from './components/Team';
 
 const App = () => {
 
@@ -21,9 +22,9 @@ const App = () => {
         } />
         <Route path="/login" element={<Login />} />
         <Route path="/notebook" element={<Notebook />} />
-        <Route path="/notebook/frontend" element={<div>Front End</div>} />
-        <Route path="/notebook/backend" element={<div>Back End</div>} />
-        <Route path="/notebook/platforms" element={<div>Platforms</div>} />
+        <Route path="/notebook/frontend" element={<Team team="frontend" />} />
+        <Route path="/notebook/backend" element={<Team team="backend" />} />
+        <Route path="/notebook/platforms" element={<Team team="platforms" />} />
       </Routes>
     </BrowserRouter>
   );
