@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const TEAMS = ['Frontend', 'Backend', 'Platforms'];
 const MEMBERS = ['Adam', 'Beatrice', 'Carl', 'Donna', 'Eddie', 'Fran'];
@@ -7,7 +7,9 @@ const RATINGS = ['Red', 'Amber', 'Green'];
 
 const NoteForm = () => {
   const navigate = useNavigate();
-  const [form, setForm] = useState({ team: '', member: '', title: '', detail: '', rating: '' });
+  const location = useLocation();
+  const preselectedTeam = location.state?.team || '';
+  const [form, setForm] = useState({ team: preselectedTeam, member: '', title: '', detail: '', rating: '' });
   const [errors, setErrors] = useState({});
 
   const validate = () => {

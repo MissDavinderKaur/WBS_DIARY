@@ -37,14 +37,24 @@ const Team = ({ team }) => {
     }, {});
   }, [team]);
 
+  const teamLabel = team.charAt(0).toUpperCase() + team.slice(1);
+
   return (
     <div className="flex flex-col min-h-screen pt-20 px-8 max-w-3xl mx-auto w-full">
-      <button
-        className="self-start px-4 py-2 bg-red-600 text-white rounded border border-red-600 hover:bg-red-700 mb-6"
-        onClick={() => navigate(-1)}
-      >
-        Back
-      </button>
+      <div className="flex items-center justify-between mb-6">
+        <button
+          className="px-4 py-2 bg-red-600 text-white rounded border border-red-600 hover:bg-red-700"
+          onClick={() => navigate(-1)}
+        >
+          Back
+        </button>
+        <button
+          className="px-4 py-2 bg-red-600 text-white rounded border border-red-600 hover:bg-red-700"
+          onClick={() => navigate('/notebook/new', { state: { team: teamLabel } })}
+        >
+          Add Note
+        </button>
+      </div>
       <h1 className="text-4xl font-bold mb-6 capitalize">{team}</h1>
       <div className="flex flex-col gap-6">
         {MEMBERS.map((member) => (
